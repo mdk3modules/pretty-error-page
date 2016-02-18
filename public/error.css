@@ -1,0 +1,148 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+  margin:0;
+  padding:0;
+  border:0;
+  font-size:100%;
+  font:inherit;
+  vertical-align:baseline; }
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section{
+  display:block; }
+
+body{
+  line-height:1; }
+
+ol, ul{
+  list-style:none; }
+
+blockquote, q{
+  quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after{
+  content:'';
+  content:none; }
+
+table{
+  border-collapse:collapse;
+  border-spacing:0; }
+.pep-error{
+  background:#f7f7f7;
+  color:#044567;
+  font-family:"Open Sans", "Helvetica Neue", "Arial", sans-serif;
+  font-size:10px;
+  padding-top:5em; }
+  @media only screen and (min-width: 768px){
+    .pep-error{
+      font-size:12px; } }
+  @media only screen and (min-width: 992px){
+    .pep-error{
+      font-size:14px; } }
+  .pep-error a, .pep-error a:link, .pep-error a:visited, .pep-error a:active{
+    color:#044567;
+    text-decoration:underline; }
+    .pep-error a:hover, .pep-error a:link:hover, .pep-error a:visited:hover, .pep-error a:active:hover{
+      background-color:#044567;
+      color:white; }
+  .pep-error--code-404{
+    background-color:#f5e6c3;
+    color:#044567; }
+  .pep-error__title{
+    font-size:4em;
+    font-weight:900;
+    text-align:center;
+    line-height:1.4; }
+  .pep-error__description{
+    font-size:2.2em;
+    font-weight:200;
+    text-align:center;
+    line-height:1.4; }
+  .pep-error__footer{
+    text-align:center;
+    font-size:1em;
+    padding:2em 0 1em; }
+  .pep-error__mascot{
+    position:relative;
+    margin:0 0 2.2em;
+    text-align:center; }
+  .pep-error--code-404 .pep-error__mascot{
+    padding-bottom:40px; }
+    .pep-error--code-404 .pep-error__mascot__accessory{
+      margin-top:-60px;
+      margin-left:180px; }
+
+.ghost{
+  overflow:visible; }
+  .ghost__body{
+    -webkit-animation-name:ghostFlying;
+            animation-name:ghostFlying;
+    -webkit-animation-duration:2s;
+            animation-duration:2s;
+    -webkit-animation-direction:alternate;
+            animation-direction:alternate;
+    -webkit-animation-timing-function:ease-in-out;
+            animation-timing-function:ease-in-out;
+    -webkit-animation-iteration-count:infinite;
+            animation-iteration-count:infinite; }
+  .ghost__shadow{
+    -webkit-animation-name:ghostShadow;
+            animation-name:ghostShadow;
+    -webkit-animation-duration:2s;
+            animation-duration:2s;
+    -webkit-animation-direction:alternate;
+            animation-direction:alternate;
+    -webkit-animation-timing-function:ease-in-out;
+            animation-timing-function:ease-in-out;
+    -webkit-animation-iteration-count:infinite;
+            animation-iteration-count:infinite;
+    -webkit-transform-origin:center center;
+            transform-origin:center center;
+    opacity:.5; }
+
+@-webkit-keyframes ghostFlying{
+  from{
+    -webkit-transform:translateY(0);
+            transform:translateY(0); }
+  to{
+    -webkit-transform:translateY(10%);
+            transform:translateY(10%); } }
+
+@keyframes ghostFlying{
+  from{
+    -webkit-transform:translateY(0);
+            transform:translateY(0); }
+  to{
+    -webkit-transform:translateY(10%);
+            transform:translateY(10%); } }
+
+@-webkit-keyframes ghostShadow{
+  from{
+    -webkit-transform:scale(1);
+            transform:scale(1);
+    opacity:.5; }
+  to{
+    -webkit-transform:scale(1.1);
+            transform:scale(1.1);
+    opacity:1; } }
+
+@keyframes ghostShadow{
+  from{
+    -webkit-transform:scale(1);
+            transform:scale(1);
+    opacity:.5; }
+  to{
+    -webkit-transform:scale(1.1);
+            transform:scale(1.1);
+    opacity:1; } }

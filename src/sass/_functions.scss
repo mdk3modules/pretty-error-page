@@ -1,0 +1,42 @@
+/*******************************************************************************
+ *
+ * Helpful Mixin for cleaner Media Queries Usage
+ *
+ * Variables:
+ *
+ *  $breakpoint: xs, sm, xs, lg
+ *  $direction: min, max
+ *
+ * @Usage: @include Media(md, max) - for Break on md- Breakpoint max-width
+ *
+ ******************************************************************************/
+
+// Pixels are used because of Bug with relative Units in Media Queries
+$grid-breakpoints: (
+    // Extra small screen / phone
+        xs: 480px,
+    // Small screen / phone
+        sm: 768px,
+    // Medium screen / tablet
+        md: 992px,
+    // Large screen / desktop
+        lg: 1200px,
+);
+
+@mixin Media($breakpoint, $direction: min) {
+
+    @if map-has-key($grid-breakpoints, $breakpoint) {
+        @if $direction == max {
+            @media only screen and (max-width: #{map-get($grid-breakpoints, $breakpoint)}) { @content; }
+        }
+        @else {
+            @media only screen and (min-width: #{map-get($grid-breakpoints, $breakpoint)}) { @content; }
+
+        }
+    }
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+    }
+
+} // End Media

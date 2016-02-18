@@ -1,0 +1,116 @@
+@import "reset";
+@import "variables";
+@import "functions";
+
+
+.pep-error {
+    background: #f7f7f7;
+    color: $pep-color--dark;
+
+    font-family: "Open Sans", "Helvetica Neue", "Arial", sans-serif;
+    font-size: 10px;
+
+    padding-top: 5em;
+
+    @include Media(sm) {
+        font-size: 12px;
+    }
+    @include Media(md) {
+        font-size: 14px;
+    }
+
+    a, a:link, a:visited, a:active {
+        color: $pep-color--dark;
+        text-decoration: underline;
+
+        &:hover {
+            background-color: $pep-color--dark;
+            color: $pep-color--light;
+        }
+    }
+
+    &--code-404 {
+        //background-color: #f4f4f4;
+        background-color: mix($pep-color__yellow, #f4f4f4, 25%);
+        color: $pep-color--dark;
+    }
+
+    &__title {
+        font-size: 4em;
+        font-weight: 900;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    &__description {
+        font-size: 2.2em;
+        font-weight: 200;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    &__footer {
+        text-align: center;
+        font-size: 1em;
+
+        padding: 2em 0 1em;
+    }
+
+    &__mascot {
+        position: relative;
+        margin: 0 0 2.2em;
+        text-align: center;
+    }
+
+    &--code-404 &__mascot {
+        padding-bottom: 40px;
+
+        &__accessory {
+            margin-top: -60px;
+            margin-left: 180px;
+        }
+    }
+}
+
+
+.ghost {
+    overflow: visible;
+
+    &__body {
+        animation-name: ghostFlying;
+        animation-duration: 2s;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    &__shadow {
+        animation-name: ghostShadow;
+        animation-duration: 2s;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+
+        transform-origin: center center;
+        opacity: .5;
+    }
+}
+
+
+@keyframes ghostFlying {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(10%);
+    }
+}
+@keyframes ghostShadow {
+    from {
+        transform: scale(1);
+        opacity: .5;
+    }
+    to {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
