@@ -10,7 +10,6 @@ namespace Mscharl\PrettyErrorPage;
 
 
 use App;
-use Illuminate\View\Factory;
 use Lang;
 use Config;
 use View;
