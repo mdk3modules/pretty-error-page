@@ -4,6 +4,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
+    "cssnano": "^3.5.2",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.1.0",
     "gulp-sass": "^2.2.0",
