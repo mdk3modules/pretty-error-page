@@ -27,25 +27,25 @@ class PrettyErrorPageServiceProvider extends ServiceProvider
     {
 
         //Add a pretty error output for 404-Errors
-        App::missing(function ($exception) {
-            dd(Config::get('pretty-error-page::always_pretty'));
-
+        App::missing(function ($exception)
+        {
             return $this->printPrettyError($exception, 404);
         });
 
         //Add pretty maintenance output
-        App::down(function () {
+        App::down(function ()
+        {
             return $this->printPrettyError(new \Exception('Page is in maintenance mode'), 503);
         });
 
         //Add a pretty error output for any error
-        App::error(function (\Exception $exception, $code) {
+        App::error(function (\Exception $exception, $code)
+        {
             //Log…
             Log::error($exception);
             //…and Return
             return $this->printPrettyError($exception, $code);
         });
-
     }
 
     /**
@@ -63,13 +63,16 @@ class PrettyErrorPageServiceProvider extends ServiceProvider
      * Return a pretty error page when not in debug mode and request doesn't require JSON
      *
      * @param \Exception $exception
-     * @param int $code
+     * @param int        $code
      *
      * @return \Illuminate\View\View|void
      */
     private function printPrettyError($exception, $code)
     {
-        if(Config::get('pretty-error-page::always_pretty') === true || (Config::get('pretty-error-page::always_pretty') !== false && Config::get('app.debug') && !Request::wantsJson())) {
+        $showPretty = Config::get('pretty-error-page::always_pretty') === true || (Config::get('pretty-error-page::always_pretty') !== false && !Config::get('app.debug'));
+
+        if($showPretty && !Request::wantsJson())
+        {
 
             //Get the corrcet error message from the exception
             $message = $exception->getMessage();
@@ -92,18 +95,24 @@ class PrettyErrorPageServiceProvider extends ServiceProvider
      * will be used.
      *
      * @param int|string $code
-     * @param string $fallbackView
+     * @param string     $fallbackView
+     *
      * @return string
      */
     private function getErrorView($code, $fallbackView = 'pretty-error-page::pages.any')
     {
         $fallbackCode = substr("$code", 0, 1) . "xx";
 
-        if(View::exists("pretty-error-page::pages.$code")) {
+        if(View::exists("pretty-error-page::pages.$code"))
+        {
             return "pretty-error-page::pages.$code";
-        } else if(View::exists("pretty-error-page::pages.$fallbackCode")) {
+        }
+        else if(View::exists("pretty-error-page::pages.$fallbackCode"))
+        {
             return "pretty-error-page::pages.$fallbackCode";
-        } else {
+        }
+        else
+        {
             return $fallbackView;
         }
     }
