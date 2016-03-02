@@ -38,6 +38,10 @@ q:before, q:after{
 table{
   border-collapse:collapse;
   border-spacing:0; }
+html, body{
+  height:100%;
+  box-sizing:border-box; }
+
 .pep-error{
   background:#f7f7f7;
   color:#044567;
@@ -57,8 +61,15 @@ table{
       background-color:#044567;
       color:white; }
   .pep-error--code-404{
-    background-color:#f5e6c3;
-    color:#044567; }
+    background:-webkit-linear-gradient(top left, #044567, #066698);
+    background:linear-gradient(to bottom right, #044567, #066698);
+    color:white; }
+    .pep-error--code-404 a, .pep-error--code-404 a:link, .pep-error--code-404 a:visited, .pep-error--code-404 a:active{
+      color:white;
+      text-decoration:underline; }
+      .pep-error--code-404 a:hover, .pep-error--code-404 a:link:hover, .pep-error--code-404 a:visited:hover, .pep-error--code-404 a:active:hover{
+        background-color:white;
+        color:#044567; }
   .pep-error__title{
     font-size:4em;
     font-weight:900;
@@ -111,6 +122,380 @@ table{
             transform-origin:center center;
     opacity:.5; }
 
+.sky__star{
+  position:absolute;
+  width:2px;
+  height:2px;
+  background:#dddddd;
+  box-shadow:0px 0px 4px rgba(255, 255, 255, 0.5);
+  border-radius:100%;
+  -webkit-animation-name:star-flicker;
+          animation-name:star-flicker;
+  -webkit-animation-iteration-count:infinite;
+          animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+          animation-timing-function:linear; }
+  .sky__star--1{
+    top:55%;
+    left:30%;
+    -webkit-transform:scale(1.6);
+            transform:scale(1.6);
+    -webkit-animation-duration:7s;
+            animation-duration:7s;
+    -webkit-animation-delay:6s;
+            animation-delay:6s; }
+  .sky__star--2{
+    top:2%;
+    left:78%;
+    -webkit-transform:scale(1.7);
+            transform:scale(1.7);
+    -webkit-animation-duration:4s;
+            animation-duration:4s;
+    -webkit-animation-delay:1s;
+            animation-delay:1s; }
+  .sky__star--3{
+    top:60%;
+    left:33%;
+    -webkit-transform:scale(1.5);
+            transform:scale(1.5);
+    -webkit-animation-duration:3s;
+            animation-duration:3s;
+    -webkit-animation-delay:9s;
+            animation-delay:9s; }
+  .sky__star--4{
+    top:53%;
+    left:29%;
+    -webkit-transform:scale(1.1);
+            transform:scale(1.1);
+    -webkit-animation-duration:7s;
+            animation-duration:7s;
+    -webkit-animation-delay:1s;
+            animation-delay:1s; }
+  .sky__star--5{
+    top:49%;
+    left:5%;
+    -webkit-transform:scale(1.1);
+            transform:scale(1.1);
+    -webkit-animation-duration:6s;
+            animation-duration:6s;
+    -webkit-animation-delay:10s;
+            animation-delay:10s; }
+  .sky__star--6{
+    top:17%;
+    left:37%;
+    -webkit-transform:scale(1.2);
+            transform:scale(1.2);
+    -webkit-animation-duration:3s;
+            animation-duration:3s;
+    -webkit-animation-delay:9s;
+            animation-delay:9s; }
+  .sky__star--7{
+    top:23%;
+    left:44%;
+    -webkit-transform:scale(1.5);
+            transform:scale(1.5);
+    -webkit-animation-duration:4s;
+            animation-duration:4s;
+    -webkit-animation-delay:1s;
+            animation-delay:1s; }
+  .sky__star--8{
+    top:51%;
+    left:57%;
+    -webkit-transform:scale(1.1);
+            transform:scale(1.1);
+    -webkit-animation-duration:4s;
+            animation-duration:4s;
+    -webkit-animation-delay:4s;
+            animation-delay:4s; }
+  .sky__star--9{
+    top:58%;
+    left:33%;
+    -webkit-transform:scale(1.4);
+            transform:scale(1.4);
+    -webkit-animation-duration:3s;
+            animation-duration:3s;
+    -webkit-animation-delay:3s;
+            animation-delay:3s; }
+  .sky__star--10{
+    top:57%;
+    left:42%;
+    -webkit-transform:scale(2);
+            transform:scale(2);
+    -webkit-animation-duration:4s;
+            animation-duration:4s;
+    -webkit-animation-delay:9s;
+            animation-delay:9s; }
+  .sky__star--11{
+    top:60%;
+    left:13%;
+    -webkit-transform:scale(1.2);
+            transform:scale(1.2);
+    -webkit-animation-duration:5s;
+            animation-duration:5s;
+    -webkit-animation-delay:3s;
+            animation-delay:3s; }
+  .sky__star--12{
+    top:45%;
+    left:5%;
+    -webkit-transform:scale(1.1);
+            transform:scale(1.1);
+    -webkit-animation-duration:7s;
+            animation-duration:7s;
+    -webkit-animation-delay:1s;
+            animation-delay:1s; }
+  .sky__star--13{
+    top:33%;
+    left:49%;
+    -webkit-transform:scale(1.8);
+            transform:scale(1.8);
+    -webkit-animation-duration:4s;
+            animation-duration:4s;
+    -webkit-animation-delay:5s;
+            animation-delay:5s; }
+  .sky__star--14{
+    top:26%;
+    left:20%;
+    -webkit-transform:scale(1.8);
+            transform:scale(1.8);
+    -webkit-animation-duration:5s;
+            animation-duration:5s;
+    -webkit-animation-delay:10s;
+            animation-delay:10s; }
+  .sky__star--15{
+    top:56%;
+    left:6%;
+    -webkit-transform:scale(1.9);
+            transform:scale(1.9);
+    -webkit-animation-duration:4s;
+            animation-duration:4s;
+    -webkit-animation-delay:2s;
+            animation-delay:2s; }
+  .sky__star--16{
+    top:11%;
+    left:79%;
+    -webkit-transform:scale(1.2);
+            transform:scale(1.2);
+    -webkit-animation-duration:7s;
+            animation-duration:7s;
+    -webkit-animation-delay:5s;
+            animation-delay:5s; }
+  .sky__star--17{
+    top:43%;
+    left:31%;
+    -webkit-transform:scale(1.4);
+            transform:scale(1.4);
+    -webkit-animation-duration:7s;
+            animation-duration:7s;
+    -webkit-animation-delay:4s;
+            animation-delay:4s; }
+  .sky__star--18{
+    top:2%;
+    left:80%;
+    -webkit-transform:scale(1.5);
+            transform:scale(1.5);
+    -webkit-animation-duration:7s;
+            animation-duration:7s;
+    -webkit-animation-delay:2s;
+            animation-delay:2s; }
+  .sky__star--19{
+    top:35%;
+    left:14%;
+    -webkit-transform:scale(1.6);
+            transform:scale(1.6);
+    -webkit-animation-duration:6s;
+            animation-duration:6s;
+    -webkit-animation-delay:2s;
+            animation-delay:2s; }
+  .sky__star--20{
+    top:58%;
+    left:48%;
+    -webkit-transform:scale(1.5);
+            transform:scale(1.5);
+    -webkit-animation-duration:5s;
+            animation-duration:5s;
+    -webkit-animation-delay:9s;
+            animation-delay:9s; }
+  .sky__star--21{
+    top:43%;
+    left:59%;
+    -webkit-transform:scale(1.8);
+            transform:scale(1.8);
+    -webkit-animation-duration:7s;
+            animation-duration:7s;
+    -webkit-animation-delay:7s;
+            animation-delay:7s; }
+  .sky__star--22{
+    top:56%;
+    left:54%;
+    -webkit-transform:scale(1.6);
+            transform:scale(1.6);
+    -webkit-animation-duration:5s;
+            animation-duration:5s;
+    -webkit-animation-delay:1s;
+            animation-delay:1s; }
+  .sky__star--23{
+    top:60%;
+    left:72%;
+    -webkit-transform:scale(1.9);
+            transform:scale(1.9);
+    -webkit-animation-duration:7s;
+            animation-duration:7s;
+    -webkit-animation-delay:4s;
+            animation-delay:4s; }
+  .sky__star--24{
+    top:20%;
+    left:32%;
+    -webkit-transform:scale(1.5);
+            transform:scale(1.5);
+    -webkit-animation-duration:3s;
+            animation-duration:3s;
+    -webkit-animation-delay:10s;
+            animation-delay:10s; }
+  .sky__star--25{
+    top:33%;
+    left:23%;
+    -webkit-transform:scale(1.9);
+            transform:scale(1.9);
+    -webkit-animation-duration:6s;
+            animation-duration:6s;
+    -webkit-animation-delay:3s;
+            animation-delay:3s; }
+  .sky__star--26{
+    top:8%;
+    left:44%;
+    -webkit-transform:scale(2);
+            transform:scale(2);
+    -webkit-animation-duration:5s;
+            animation-duration:5s;
+    -webkit-animation-delay:2s;
+            animation-delay:2s; }
+  .sky__star--27{
+    top:5%;
+    left:41%;
+    -webkit-transform:scale(2);
+            transform:scale(2);
+    -webkit-animation-duration:3s;
+            animation-duration:3s;
+    -webkit-animation-delay:3s;
+            animation-delay:3s; }
+  .sky__star--28{
+    top:36%;
+    left:8%;
+    -webkit-transform:scale(1.1);
+            transform:scale(1.1);
+    -webkit-animation-duration:6s;
+            animation-duration:6s;
+    -webkit-animation-delay:4s;
+            animation-delay:4s; }
+  .sky__star--29{
+    top:34%;
+    left:27%;
+    -webkit-transform:scale(1.4);
+            transform:scale(1.4);
+    -webkit-animation-duration:4s;
+            animation-duration:4s;
+    -webkit-animation-delay:1s;
+            animation-delay:1s; }
+  .sky__star--30{
+    top:27%;
+    left:31%;
+    -webkit-transform:scale(1.7);
+            transform:scale(1.7);
+    -webkit-animation-duration:3s;
+            animation-duration:3s;
+    -webkit-animation-delay:6s;
+            animation-delay:6s; }
+  .sky__star--31{
+    top:5%;
+    left:78%;
+    -webkit-transform:scale(1.2);
+            transform:scale(1.2);
+    -webkit-animation-duration:6s;
+            animation-duration:6s;
+    -webkit-animation-delay:9s;
+            animation-delay:9s; }
+  .sky__star--32{
+    top:40%;
+    left:33%;
+    -webkit-transform:scale(1.1);
+            transform:scale(1.1);
+    -webkit-animation-duration:6s;
+            animation-duration:6s;
+    -webkit-animation-delay:1s;
+            animation-delay:1s; }
+  .sky__star--33{
+    top:27%;
+    left:53%;
+    -webkit-transform:scale(1.8);
+            transform:scale(1.8);
+    -webkit-animation-duration:4s;
+            animation-duration:4s;
+    -webkit-animation-delay:1s;
+            animation-delay:1s; }
+  .sky__star--34{
+    top:10%;
+    left:30%;
+    -webkit-transform:scale(1.4);
+            transform:scale(1.4);
+    -webkit-animation-duration:3s;
+            animation-duration:3s;
+    -webkit-animation-delay:8s;
+            animation-delay:8s; }
+  .sky__star--35{
+    top:9%;
+    left:55%;
+    -webkit-transform:scale(1.1);
+            transform:scale(1.1);
+    -webkit-animation-duration:6s;
+            animation-duration:6s;
+    -webkit-animation-delay:10s;
+            animation-delay:10s; }
+  .sky__star--36{
+    top:22%;
+    left:48%;
+    -webkit-transform:scale(1.6);
+            transform:scale(1.6);
+    -webkit-animation-duration:3s;
+            animation-duration:3s;
+    -webkit-animation-delay:6s;
+            animation-delay:6s; }
+  .sky__star--37{
+    top:31%;
+    left:91%;
+    -webkit-transform:scale(2);
+            transform:scale(2);
+    -webkit-animation-duration:4s;
+            animation-duration:4s;
+    -webkit-animation-delay:6s;
+            animation-delay:6s; }
+  .sky__star--38{
+    top:8%;
+    left:75%;
+    -webkit-transform:scale(1.9);
+            transform:scale(1.9);
+    -webkit-animation-duration:7s;
+            animation-duration:7s;
+    -webkit-animation-delay:1s;
+            animation-delay:1s; }
+  .sky__star--39{
+    top:20%;
+    left:76%;
+    -webkit-transform:scale(1.5);
+            transform:scale(1.5);
+    -webkit-animation-duration:4s;
+            animation-duration:4s;
+    -webkit-animation-delay:2s;
+            animation-delay:2s; }
+  .sky__star--40{
+    top:51%;
+    left:18%;
+    -webkit-transform:scale(1.2);
+            transform:scale(1.2);
+    -webkit-animation-duration:5s;
+            animation-duration:5s;
+    -webkit-animation-delay:8s;
+            animation-delay:8s; }
+
 @-webkit-keyframes ghostFlying{
   from{
     -webkit-transform:translateY(0);
@@ -145,4 +530,16 @@ table{
   to{
     -webkit-transform:scale(1.1);
             transform:scale(1.1);
+    opacity:1; } }
+
+@-webkit-keyframes star-flicker{
+  0%, 4%{
+    opacity:.6; }
+  2%{
+    opacity:1; } }
+
+@keyframes star-flicker{
+  0%, 4%{
+    opacity:.6; }
+  2%{
     opacity:1; } }

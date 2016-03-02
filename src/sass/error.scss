@@ -2,6 +2,10 @@
 @import "variables";
 @import "functions";
 
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+}
 
 .pep-error {
     background: #f7f7f7;
@@ -31,8 +35,18 @@
 
     &--code-404 {
         //background-color: #f4f4f4;
-        background-color: mix($pep-color__yellow, #f4f4f4, 25%);
-        color: $pep-color--dark;
+        background: linear-gradient(to bottom right, $pep-color--dark, lighten($pep-color--dark, 10%));
+        color: $pep-color--light;
+
+        a, a:link, a:visited, a:active {
+            color: $pep-color--light;
+            text-decoration: underline;
+
+            &:hover {
+                background-color: $pep-color--light;
+                color: $pep-color--dark;
+            }
+        }
     }
 
     &__title {
@@ -95,6 +109,33 @@
     }
 }
 
+.sky {
+    &__star {
+        position: absolute;
+
+        width: 2px;
+        height: 2px;
+        background: #dddddd;
+        box-shadow: 0px 0px 4px rgba(white, 0.5);
+
+        border-radius: 100%;
+        animation-name: star-flicker;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @for $i from 1 through 40 {
+            &--#{$i} {
+                top: 0% + random(60);
+                left: 2% + random(90);
+                transform: scale(1 + random(10)/10);
+
+                animation-duration: 2s + random(5);
+                animation-delay: 0s + random(10);
+            }
+        }
+    }
+}
+
 
 @keyframes ghostFlying {
     from {
@@ -111,6 +152,14 @@
     }
     to {
         transform: scale(1.1);
+        opacity: 1;
+    }
+}
+@keyframes star-flicker {
+    0%, 4% {
+        opacity: .6;
+    }
+    2% {
         opacity: 1;
     }
 }
