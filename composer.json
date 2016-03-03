@@ -1,6 +1,7 @@
 {
     "name": "mscharl/pretty-error-page",
-    "description": "",
+    "description": "Nice error pages for Laravel 4.2",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Michael Scharl",
@@ -16,5 +17,11 @@
             "Mscharl\\PrettyErrorPage": "src/"
         }
     },
+    "keywords": [
+        "exception",
+        "error",
+        "handling",
+        "laravel"
+    ],
     "minimum-stability": "stable"
 }
