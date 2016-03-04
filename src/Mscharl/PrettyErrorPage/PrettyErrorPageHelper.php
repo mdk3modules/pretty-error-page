@@ -9,10 +9,10 @@
 namespace Mscharl\PrettyErrorPage;
 
 
-use App;
-use Lang;
-use Config;
-use View;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\View;
 
 class PrettyErrorPageHelper
 {
@@ -20,19 +20,39 @@ class PrettyErrorPageHelper
      * Get a translated string for an error page.
      * Either a specific one if defined or a generic if not.
      *
-     * @param $key
-     * @param $code
+     * @param       $key
+     * @param       $code
      * @param array $options
+     *
      * @return string
      */
-    public static function getPageText($key, $code, $options = []) {
+    public static function getPageText($key, $code, $options = [])
+    {
+        $customizedSpecificKey = "pretty-error-page-customized::$code.$key";
+        $customizedGenericKey = "pretty-error-page-customized::generic.$key";
         $specificKey = "pretty-error-page::$code.$key";
         $genericKey = "pretty-error-page::generic.$key";
 
-        return Lang::has($specificKey) ? Lang::get($specificKey, $options) : Lang::get($genericKey, $options);
+        if(Lang::has($customizedSpecificKey))
+        {
+            return Lang::get($customizedSpecificKey, $options);
+        }
+        else if(Lang::has($customizedGenericKey))
+        {
+            return Lang::get($customizedGenericKey, $options);
+        }
+        else if(Lang::has($specificKey))
+        {
+            return Lang::get($specificKey, $options);
+        }
+        else
+        {
+            return Lang::get($genericKey, $options);
+        }
     }
 
-    public static function getEmailBugLink(\Exception $exception, $message) {
+    public static function getEmailBugLink(\Exception $exception, $message)
+    {
         $lang = App::getLocale();
         $fallbackLang = Config::get('app.fallback_locale');
         $emergencyLang = 'en';

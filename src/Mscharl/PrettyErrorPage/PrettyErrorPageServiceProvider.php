@@ -1,10 +1,11 @@
 <?php namespace Mscharl\PrettyErrorPage;
 
-use App;
-use Config;
-use Log;
-use Request;
-use View;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class PrettyErrorPageServiceProvider extends ServiceProvider
@@ -57,6 +58,9 @@ class PrettyErrorPageServiceProvider extends ServiceProvider
     {
         //Register the packages assets
         $this->package('mscharl/pretty-error-page');
+
+        //add a language namespace to allow customizing of translations
+        Lang::addNamespace('pretty-error-page-customized', app_path('lang/packages/mscharl/pretty-error-page'));
     }
 
     /**
