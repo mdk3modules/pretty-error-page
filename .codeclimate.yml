@@ -1,0 +1,22 @@
+engines:
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+  phpmd:
+    enabled: true
+    exclude_fingerprints:
+    - b87ed2f6a4f5b564e1dd8f02b8928e21
+    - a5315274712277167cba81959ab5c76e
+  scss-lint:
+    enabled: true
+ratings:
+  paths:
+  - app/**
+  - lib/**
+  - "**.rb"
+  - "**.go"
+exclude_paths:
+- public/**/*
+- node_modules/**/*
+- vendor/**/*

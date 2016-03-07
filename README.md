@@ -1,5 +1,5 @@
 # mscharl/pretty-error-page
-[![Total Downloads](https://img.shields.io/packagist/dm/mscharl/pretty-error-page.svg)](https://packagist.org/packages/mscharl/pretty-error-page) [![Latest Version](http://img.shields.io/packagist/v/mscharl/pretty-error-page.svg)](https://packagist.org/packages/mscharl/pretty-error-page)
+[![Total Downloads](https://img.shields.io/packagist/dm/mscharl/pretty-error-page.svg)](https://packagist.org/packages/mscharl/pretty-error-page) [![Latest Version](http://img.shields.io/packagist/v/mscharl/pretty-error-page.svg)](https://packagist.org/packages/mscharl/pretty-error-page) [![Code Climate](https://img.shields.io/codeclimate/github/mscharl/pretty-error-page.svg)](https://codeclimate.com/github/mscharl/pretty-error-page)
 
 -----
 

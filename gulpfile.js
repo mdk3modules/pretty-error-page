@@ -1,14 +1,18 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    postcss = require('gulp-postcss');
+    postcss = require('gulp-postcss'),
+
+    autoprefixer = require('autoprefixer'),
+    comments = require('postcss-discard-comments'),
+    cssnano = require('cssnano');
 
 gulp.task('styles', function() {
     return gulp.src('src/sass/error.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss([
-            require('autoprefixer')(),
-            require('postcss-discard-comments')(),
-            require('cssnano')()
+            autoprefixer(),
+            comments(),
+            cssnano()
         ]))
         .pipe(gulp.dest('public'));
 });
