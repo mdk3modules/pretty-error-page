@@ -10,6 +10,11 @@ engines:
     - a5315274712277167cba81959ab5c76e
   scss-lint:
     enabled: true
+    checks:
+      Indentation:
+        enabled: false
+      Comment:
+        enabled: false
 ratings:
   paths:
   - app/**
@@ -20,3 +25,4 @@ exclude_paths:
 - public/**/*
 - node_modules/**/*
 - vendor/**/*
+- src/sass/_reset.scss

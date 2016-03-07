@@ -28,27 +28,25 @@ class PrettyErrorPageHelper
      */
     public static function getPageText($key, $code, $options = [])
     {
-        $customizedSpecificKey = "pretty-error-page-customized::$code.$key";
-        $customizedGenericKey = "pretty-error-page-customized::generic.$key";
+        $cSpecificKey = "pretty-error-page-customized::$code.$key";
+        $cGenericKey = "pretty-error-page-customized::generic.$key";
         $specificKey = "pretty-error-page::$code.$key";
         $genericKey = "pretty-error-page::generic.$key";
 
-        if(Lang::has($customizedSpecificKey))
+        if(Lang::has($cSpecificKey))
         {
-            return Lang::get($customizedSpecificKey, $options);
+            return Lang::get($cSpecificKey, $options);
         }
-        else if(Lang::has($customizedGenericKey))
+        else if(Lang::has($cGenericKey))
         {
-            return Lang::get($customizedGenericKey, $options);
+            return Lang::get($cGenericKey, $options);
         }
         else if(Lang::has($specificKey))
         {
             return Lang::get($specificKey, $options);
         }
-        else
-        {
-            return Lang::get($genericKey, $options);
-        }
+
+        return Lang::get($genericKey, $options);
     }
 
     public static function getEmailBugLink(\Exception $exception, $message)

@@ -115,9 +115,7 @@ class PrettyErrorPageServiceProvider extends ServiceProvider
         {
             return "pretty-error-page::pages.$fallbackCode";
         }
-        else
-        {
-            return $fallbackView;
-        }
+
+        return $fallbackView;
     }
 }
