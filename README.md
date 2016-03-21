@@ -17,7 +17,7 @@ Add the service provider `'Mscharl\PrettyErrorPage\PrettyErrorPageServiceProvide
 
 Publish public assets
 ```sh
-php artisan asset:publish --path=vendor/mscharl/pretty-error-page/public mscharl/pretty-error-page
+php artisan asset:publish
 ```
 
 -----
@@ -42,7 +42,7 @@ But you still can customize the translation since they are the easiest way to cu
 
 Translation will be looked up by the package in the following order:
 ```
-customized::404.title > customized::general.title > predefined::404.title > predefined::general.title
+pretty-error-page-customized::404.title > pretty-error-page-customized::general.title > pretty-error-page::404.title > pretty-error-page::general.title
 ```
 
 ##### Customize specific error code translations
