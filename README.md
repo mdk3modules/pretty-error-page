@@ -1,5 +1,5 @@
 # mscharl/pretty-error-page
-[![Total Downloads](https://img.shields.io/packagist/dm/mscharl/pretty-error-page.svg)](https://packagist.org/packages/mscharl/pretty-error-page) [![Latest Version](http://img.shields.io/packagist/v/mscharl/pretty-error-page.svg)](https://packagist.org/packages/mscharl/pretty-error-page) [![Code Climate](https://img.shields.io/codeclimate/github/mscharl/pretty-error-page.svg)](https://codeclimate.com/github/mscharl/pretty-error-page)
+[![Total Downloads](https://img.shields.io/packagist/dm/mscharl/pretty-error-page.svg)](https://packagist.org/packages/mscharl/pretty-error-page) [![Latest Version](http://img.shields.io/packagist/v/mscharl/pretty-error-page.svg)](https://packagist.org/packages/mscharl/pretty-error-page)
 
 -----
 
@@ -37,10 +37,10 @@ php artisan config:publish mscharl/pretty-error-page
   * `false` never show pretty error page
 
 ### Translations
-Unfortunalty publishing lang-files like config- or view-files is not supported by default.
+Unfortunately publishing lang-files like config- or view-files is not supported by default.
 But you still can customize the translation since they are the easiest way to customize a general or specific error output. You do not need to edit anything inside the views. Translations are automatically loaded by the thrown http-status-code.
 
-Translation will be lokked up by the package in the following order:
+Translation will be looked up by the package in the following order:
 ```
 customized::404.title > customized::general.title > predefined::404.title > predefined::general.title
 ```
@@ -71,7 +71,7 @@ return [
 php artisan asset:publish mscharl/pretty-error-page
 ```
 
-You can either override the predefined tempaltes or just add custom error pages for specific error codes.
+You can either override the predefined templates or just add custom error pages for specific error codes.
 
 ##### layouts
 * `mail.blade.php`: This file is used to render the email body that can be sent by the user getting the error to inform you about the incidence.
