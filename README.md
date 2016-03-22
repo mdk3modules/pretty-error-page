@@ -1,5 +1,5 @@
 # mscharl/pretty-error-page
-[![Total Downloads](https://img.shields.io/packagist/dm/mscharl/pretty-error-page.svg)](https://packagist.org/packages/mscharl/pretty-error-page) [![Latest Version](http://img.shields.io/packagist/v/mscharl/pretty-error-page.svg)](https://packagist.org/packages/mscharl/pretty-error-page)
+[![Total Downloads](https://img.shields.io/packagist/dt/mscharl/pretty-error-page.svg)](https://packagist.org/packages/mscharl/pretty-error-page) [![This Version](https://img.shields.io/badge/packagist-v1.0.0-blue.svg)](https://packagist.org/packages/mscharl/pretty-error-page)
 
 -----
 
