@@ -65,7 +65,8 @@ class PrettyErrorPageHelper
         View::share('message', $message);
 
         $mailBody = rawurlencode(View::make($mailView)->render());
+        $mailRecipient = Config::get('pretty-error-page::recipient');
 
-        return "mailto:your@e.mail?body=$mailBody";
+        return "mailto:$mailRecipient?body=$mailBody";
     }
 }

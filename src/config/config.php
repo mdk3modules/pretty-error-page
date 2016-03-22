@@ -15,4 +15,16 @@ return [
 
     'always_pretty' => true,
 
+    /*
+    |--------------------------------------------------------------------------
+    | E-Mail Recipient
+    |--------------------------------------------------------------------------
+    |
+    | You can offer your visitors to send you an e-mail with a bugreport to
+    | identify and remove the error.
+    |
+    */
+
+    'mail_recipient' => '',
+
 ];
